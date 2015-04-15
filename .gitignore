@@ -53,3 +53,6 @@ docs/_build
 .ve
 .bootstrap
 *.bak
+
+# Database atrifacts
+db.sqlite3
