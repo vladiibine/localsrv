@@ -58,7 +58,7 @@ setup(
         # eg: 'keyword1', 'keyword2', 'keyword3',
     ],
     install_requires=[
-        'django>=1.8,<1.9',
+        'django>=1.8,<1.9', 'requests>=2.6,<2.7'
     ],
     extras_require={
         # eg: 'rst': ['docutils>=0.11'],
