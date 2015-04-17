@@ -1,6 +1,6 @@
 from django.conf.urls import include, url
 from django.contrib import admin
-from .localsrv import urls
+from . import urls
 
 urlpatterns = [
     # Examples:

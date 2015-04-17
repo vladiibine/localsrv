@@ -1,7 +1,6 @@
 from django.contrib import admin
 
 from .forms import FilePickerForm
-
 from .models import (ServableContent, StringSource, Source,
                      ServableHttpHeader, FileSource, URLSource)
 

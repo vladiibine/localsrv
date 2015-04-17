@@ -14,6 +14,7 @@ class Migration(migrations.Migration):
             name='ServableContent',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('path', models.CharField(max_length=255, blank=True)),
             ],
         ),
         migrations.CreateModel(
@@ -57,16 +58,11 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='servablecontent',
             name='headers',
-            field=models.ManyToManyField(to=b'localsrv.ServableHttpHeader', blank=True),
+            field=models.ManyToManyField(to='localsrv.ServableHttpHeader', blank=True),
         ),
         migrations.AddField(
             model_name='servablecontent',
             name='source',
             field=models.ForeignKey(to='localsrv.Source', null=True),
-        ),
-        migrations.AddField(
-            model_name='servablecontent',
-            name='path',
-            field=models.CharField(max_length=255, blank=True),
         ),
     ]
