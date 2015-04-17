@@ -62,6 +62,7 @@ setup(
         'Programming Language :: Python :: Implementation :: CPython',
         'Programming Language :: Python :: Implementation :: PyPy',
         'Topic :: Utilities',
+        'Topic :: Internet :: WWW/HTTP :: HTTP Servers',
     ],
     keywords=[
         # eg: 'keyword1', 'keyword2', 'keyword3',
