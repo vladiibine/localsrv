@@ -70,10 +70,6 @@ TEMPLATES = [
     },
 ]
 
-# what if i take this out?
-WSGI_APPLICATION = 'localsrv.test_wsgi.application'
-
-
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
