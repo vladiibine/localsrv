@@ -14,6 +14,14 @@ from os.path import splitext
 
 from setuptools import find_packages
 from setuptools import setup
+from setuptools.command import develop
+
+
+class Develop(develop.develop):
+    def run(self, *args, **kwargs):
+        import pydevd; pydevd.settrace()
+        develop.run(*args, **kwargs)
+
 
 def read(*names, **kwargs):
     return io.open(
@@ -31,14 +39,15 @@ setup(
     author='Vlad George Ardelean',
     author_email='asdf@yopmail.com',
     url='https://github.com/vladiibine/localsrv',
-    packages=find_packages('src/localsrv'),
-    package_dir={'': 'src/localsrv'},
+    packages=find_packages('src'),
+    package_dir={'': 'src'},
     py_modules=[splitext(basename(path))[0] for path in glob('src/*.py')],
     include_package_data=True,
     zip_safe=False,
+
     classifiers=[
         # complete classifier list: http://pypi.python.org/pypi?%3Aaction=list_classifiers
-        'Development Status :: 5 - Production/Stable',
+        'Development Status :: 1 - Planning',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',
         'Operating System :: Unix',

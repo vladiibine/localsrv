@@ -52,7 +52,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.security.SecurityMiddleware',
 )
 
-ROOT_URLCONF = 'localsrv.urls'
+ROOT_URLCONF = 'localsrv.test_urls'
 
 TEMPLATES = [
     {
@@ -70,6 +70,7 @@ TEMPLATES = [
     },
 ]
 
+# what if i take this out?
 WSGI_APPLICATION = 'localsrv.wsgi.application'
 
 
