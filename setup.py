@@ -32,9 +32,9 @@ def read(*names, **kwargs):
 
 setup(
     name='django-localsrv',
-    version='0.1.0',
-    license='BSD',
-    description="A more useful test server than Python's SimpleHTTPServer",
+    version='0.1.1',
+    license='MIT',
+    description="Django app for serving static content from different sources (files, strings, urls, etc.) at custom paths, using custom HTTP headers. Intended as a more flexible option than Python's SimpleHTTPServer",
     long_description='%s\n%s' % (read('README.rst'), re.sub(':[a-z]+:`~?(.*?)`', r'``\1``', read('CHANGELOG.rst'))),
     author='Vlad George Ardelean',
     author_email='asdf@yopmail.com',
@@ -49,7 +49,7 @@ setup(
         # complete classifier list: http://pypi.python.org/pypi?%3Aaction=list_classifiers
         'Development Status :: 1 - Planning',
         'Intended Audience :: Developers',
-        'License :: OSI Approved :: BSD License',
+        'License :: OSI Approved :: MIT License',
         'Operating System :: Unix',
         'Operating System :: POSIX',
         'Operating System :: Microsoft :: Windows',
