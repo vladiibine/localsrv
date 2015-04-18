@@ -49,7 +49,9 @@ localsrv
     :alt: Scrutinizer Status
     :target: https://scrutinizer-ci.com/g/vladiibine/localsrv/
 
-A more useful test server than Python's SimpleHTTPServer
+**django-localsrv** is a django app that allows you to serve content at configurable paths, with configurable response HTTP headers.
+
+It's intended as a more useful test server than Python's SimpleHTTPServer, mainly because of the configuration options.
 
 * Free software: BSD license
 
