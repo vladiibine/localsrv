@@ -53,7 +53,7 @@ localsrv
 
 It's intended as a more useful test server than Python's SimpleHTTPServer, mainly because of the configuration options.
 
-* Free software: BSD license
+* Free software: MIT license
 
 Installation
 ============
