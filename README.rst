@@ -55,8 +55,11 @@ It's intended as a more useful test server than Python's SimpleHTTPServer, mainl
 
 * Free software: MIT license
 
+
 Installation
 ============
+
+For the love of mankind, please use virtualenv.
 
 ::
 
@@ -86,6 +89,21 @@ In your url configuration file (usually `urls.py`) add the root path to where yo
    # like the one in this example
    url(r'^localsrv/', include(localsrv_urls))
   )
+  
+
+Additional steps for the eager ones
+===================================
+
+This app contains models, so we'll need to run migrations for our app
+
+::
+
+    django-admin.py migrate --settings=localsrv.settings
+    
+This will create a sqlite database file in directory where the package was installed. If you don't have a problem with that, 
+you will be able to start the server now, and enjoy the app. If you want to integrate the app into some project of yours,
+though I advise against it, you can do so. I won't teach you how, but it's a simple matter of including 'localsrv' in the 
+INSTALLED_APPS list of the settings file of your project.
 
 Now you're ready to start configuring what content you're going to serve at the url /localsrv/
 
@@ -93,6 +111,8 @@ Specifying the content to serve
 ===============================
 Since this is a django app, if you did all the above steps (setting the app as a member of the INSTALLED_APPS list is the important thing),
 you'll, you'll have access to the `Localsrv` entry on your django admin page.
+
+Working on a simpler, command line interface to the app, with perhaps a simple configuration dictionary.
 
 Things to know: there are at the moment 3 types of content that you can serve:
 
