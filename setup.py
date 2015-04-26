@@ -32,7 +32,7 @@ def read(*names, **kwargs):
 
 setup(
     name='django-localsrv',
-    version='0.1.1',
+    version='0.1.2',
     license='MIT',
     description="Django app for serving static content from different sources (files, strings, urls, etc.) at custom paths, using custom HTTP headers. Intended as a more flexible option than Python's SimpleHTTPServer",
     long_description='%s\n%s' % (read('README.rst'), re.sub(':[a-z]+:`~?(.*?)`', r'``\1``', read('CHANGELOG.rst'))),

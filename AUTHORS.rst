@@ -2,4 +2,4 @@
 Authors
 =======
 
-* Vlad George Ardelean - http://
+* Vlad George Ardelean - http://github.com/vladiibine
