@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models import ObjectDoesNotExist
 import requests
 # Create your models here.
 
@@ -22,7 +23,11 @@ class Source(models.Model):
             try:
                 if elem.startswith('_'):
                     continue
-                attribute = getattr(self, elem)
+                # pre 1.6 caution.
+                try:
+                    attribute = getattr(self, elem)
+                except ObjectDoesNotExist:
+                    attribute = None
                 if isinstance(attribute, self.__class__):
                     return attribute
             except AttributeError:
@@ -38,7 +43,7 @@ class Source(models.Model):
 
 
 class FileSource(Source):
-    file_path = models.FileField(null=True)
+    file_path = models.FileField(null=True, upload_to='filesources')
 
     def __unicode__(self):
         return u"File: {}".format(self.file_path)

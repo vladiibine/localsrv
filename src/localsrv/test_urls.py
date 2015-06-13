@@ -1,6 +1,12 @@
-from django.conf.urls import include, url
+import django
+from django.conf.urls import url, include
 from django.contrib import admin
 from . import urls
+
+django_version = django.get_version()
+if '1.4' <= django_version < '1.7':
+    admin.autodiscover()
+
 
 urlpatterns = [
     # Examples:

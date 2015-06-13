@@ -3,13 +3,11 @@
 from __future__ import absolute_import, print_function
 
 import io
-import os
 import re
 from glob import glob
 from os.path import basename
 from os.path import dirname
 from os.path import join
-from os.path import relpath
 from os.path import splitext
 
 from setuptools import find_packages
@@ -68,7 +66,7 @@ setup(
         # eg: 'keyword1', 'keyword2', 'keyword3',
     ],
     install_requires=[
-        'django>=1.8,<1.9', 'requests>=2.6,<2.7'
+        'django>=1.4,<1.9', 'requests>=2.6,<2.7'
     ],
     extras_require={
         # eg: 'rst': ['docutils>=0.11'],
