@@ -14,7 +14,7 @@ class ServableHttpHeader(models.Model):
         )
 
 
-class Source(models.Model):
+class BodySource(models.Model):
     """Relation table, used for linking the ServableContent with the multiple
     types of sources (file, string and URL)
     """
@@ -42,8 +42,9 @@ class Source(models.Model):
         return self.find_source().to_string()
 
 
-class FileSource(Source):
-    file_path = models.FileField(null=True, upload_to='filesources')
+class BodyFromFile(BodySource):
+    # file_path = models.FileField(null=True, upload_to='filesources')
+    file_path = models.FilePathField(null=True)
 
     def __unicode__(self):
         return u"File: {}".format(self.file_path)
@@ -53,7 +54,7 @@ class FileSource(Source):
             return the_file.read()
 
 
-class StringSource(Source):
+class BodyFromString(BodySource):
     # A (max) 20 MB String
     string = models.TextField(max_length=1024 * 1024 * 20)
 
@@ -64,7 +65,7 @@ class StringSource(Source):
         return self.string
 
 
-class URLSource(Source):
+class BodyFromURL(BodySource):
     url = models.URLField()
 
     def __unicode__(self):
@@ -74,11 +75,11 @@ class URLSource(Source):
         return requests.get(self.url).text
 
 
-class ServableContent(models.Model):
+class HttpResponse(models.Model):
     """Serve a file from a file path, or a resource at a given URL
     """
     # The source for the served content (atm. a String, a URL or a file path)
-    source = models.ForeignKey(Source, null=True)
+    source = models.ForeignKey(BodySource, null=True)
 
     # The path at which the content will be server
     path = models.CharField(max_length=255, blank=True)
