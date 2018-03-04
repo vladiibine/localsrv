@@ -33,15 +33,15 @@ localsrv
     :alt: PyPI Package monthly downloads
     :target: https://pypi.python.org/pypi/django-localsrv
 
-.. |wheel| image:: https://pypip.in/wheel/django-localsrv/badge.png?style=flat
+.. |wheel| image:: https://img.shields.io/pypi/wheel/django-localsrv.svg?style=flat
     :alt: PyPI Wheel
     :target: https://pypi.python.org/pypi/django-localsrv
 
-.. |supported-versions| image:: https://pypip.in/py_versions/django-localsrv/badge.png?style=flat
+.. |supported-versions| image:: https://img.shields.io/pypi/pyversions/django-localsrv.svg?style=flat
     :alt: Supported versions
     :target: https://pypi.python.org/pypi/django-localsrv
 
-.. |supported-implementations| image:: https://pypip.in/implementation/django-localsrv/badge.png?style=flat
+.. |supported-implementations| image:: https://img.shields.io/pypi/implementation/django-localsrv.svg?style=flat
     :alt: Supported imlementations
     :target: https://pypi.python.org/pypi/django-localsrv
 
